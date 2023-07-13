@@ -52,17 +52,17 @@ Finally, test DiffDefence!
 
 - White box attack setting
 ```
-$python diffDefence.py --dataset='MNIST' --classifier='c_a' --typeA = 'classifier_a' --diffusion_name='diff' --test_size=1000
+$python diffDefence.py --dataset='MNIST' --classifier='c_a' --typeA='classifier_a' --diffusion_name='diff' --test_size=1000
 ```
 
 - Black box attack setting
 ```
-$python diffDefence.py --dataset='MNIST' --classifier='c_a' --typeA = 'classifier_a' --sub_classifier='c_b' --typeB='classifier_b'  --diffusion_name='diff' --test_size=1000
+$python diffDefence.py --dataset='MNIST' --classifier='c_a' --typeA='classifier_a' --sub_classifier='c_b' --typeB='classifier_b'  --diffusion_name='diff' --test_size=1000
 ```
 
  - If you want to test adversarial trained model against adversarial attacks
 ```
-$python diffDefence.py --dataset='MNIST' --classifier='c_a_adv' --typeA = 'classifier_a' --diffusion_name='diff' --test_size=1000
+$python diffDefence.py --dataset='MNIST' --classifier='c_a_adv' --typeA='classifier_a' --diffusion_name='diff' --test_size=1000
 ```
 
 

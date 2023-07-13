@@ -35,7 +35,7 @@ def main():
     
     parser.add_argument("--lr", type=float, default=1e-2, help='learning rate')
     parser.add_argument("--dataset", type=str, default="MNIST", help='dataset (MNIST-KMNIST)')
-    parser.add_argument("--epochs", type=int, default="5", help='Training epochs')
+    parser.add_argument("--epochs", type=int, default="20", help='Training epochs')
     parser.add_argument("--batch_size", type=int, default="128", help='Batch size')
     parser.add_argument("--momentum", type=float, default="0.9", help='momentum')
     parser.add_argument("--classes", type=int, default="10", help='dataset class')

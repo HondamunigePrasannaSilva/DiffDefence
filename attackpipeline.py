@@ -68,7 +68,7 @@ def createAdversarialData(attack, testset, batch_size):
 
     return x_test_adv , l
 
-def FGSM_Attack_CH(submodel, datasetname, classifiername, testset, batchSize, type):
+def FGSM_Attack_CH(submodel, datasetname, classifiername, testset, batchSize, type=None):
     """
     FGSM ATTACK
     """
