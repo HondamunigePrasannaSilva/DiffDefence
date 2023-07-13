@@ -18,7 +18,7 @@ $ conda create --name env --file requirements.txt
 $ conda activate env
 ```
 
-#Installation Instructions
+# Installation Instructions
 Make sure to run the setup file to create all the necessary folders!
 ```
 $python setup.py 
