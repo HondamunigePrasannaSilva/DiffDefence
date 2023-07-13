@@ -10,7 +10,7 @@ import os
 
 
 
-path = [ './pretrained', './pretrained/diffusion', './pretrained/diffusion/MNIST',
+path = [ './imgs/diff','./imgs/imgrecon',  './pretrained', './pretrained/diffusion', './pretrained/diffusion/MNIST',
          './pretrained/diffusion/KMNIST', './pretrained/MNIST', './pretrained/KMNIST',
           './re_roc','./re_roc/AA', './re_roc/DF' , './re_roc/EN', './re_roc/EOTPGD', 
           './re_roc/FGSM', './re_roc/PGD', './re_roc/SA', './re_roc/roc_plot']
