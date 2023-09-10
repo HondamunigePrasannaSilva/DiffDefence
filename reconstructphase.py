@@ -10,6 +10,9 @@ from classifiers.classifier import *
 from train import *
 from DDPM import *
 
+
+c, h, w = 1, 28, 28 
+
 #check for cuda
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -79,8 +82,7 @@ def reconstruction_module(model, data, lr=25, rec_iter = 4, rand_initi = 5):
 
     """
 
-    # prende dal config?
-    c, h, w = 1, 28, 28 # TODO
+    #c, h, w = 1, 28, 28 
 
     #this loss is the main one, that used to find 
     loss_fn = nn.MSELoss()
@@ -125,7 +127,7 @@ def reconstruction_module(model, data, lr=25, rec_iter = 4, rand_initi = 5):
 
 def reconstruction_pipeline(advdataset, diffusionModel,reciter = 4, randiniti = 5):
    
-    c, h, w = 1 , 28, 28 # TODO
+    #c, h, w = 1 , 28, 28 
     
     bestReconstructions = torch.Tensor(size=[advdataset.shape[0],c,h,w])
     z_ = torch.Tensor(size=[advdataset.shape[0],c,h,w])

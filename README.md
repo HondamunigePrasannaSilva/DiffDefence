@@ -1,4 +1,7 @@
-# DiffDefence: defending against adversarial attacks via diffusion models. [![pytorch](https://img.shields.io/badge/PyTorch-1.12.0-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
+# DiffDefence: defending against adversarial attacks via diffusion models. [![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg)](https://arxiv.org/abs/2309.03702)
+
+[![pytorch](https://img.shields.io/badge/PyTorch-1.12.0-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
+
 
 
 This is the official implementation of the paper DiffDefence, ICIAP 2023
@@ -10,6 +13,12 @@ Abstract: *This paper proposes a reconstruction method based on the diffusion mo
   <img src="./imgs/diffDefence.png">
 </p>
 
+## Poster 
+
+<p align="center">
+  <img src="./imgs/poster.png">
+</p>
+
 ## Requirements
 
 Before running the code, install conda, and requirements and activate the environment env
@@ -18,7 +27,7 @@ $ conda create --name env --file requirements.txt
 $ conda activate env
 ```
 
-# Installation Instructions
+# Test Instructions
 Make sure to run the setup file to create all the necessary folders!
 ```
 $python setup.py 
@@ -65,6 +74,21 @@ $python diffDefence.py --dataset='MNIST' --classifier='c_a' --typeA='classifier_
 $python diffDefence.py --dataset='MNIST' --classifier='c_a_adv' --typeA='classifier_a' --diffusion_name='diff' --test_size=1000
 ```
 
+# Experiments
 
 
+## DiffDefense performance against white and black box attacks
+<p align="center" >
+  <img width="500" height="500" src="./imgs/plot.png">
+</p>
+
+
+## Attack Detection
+<p align="center">
+  <img width="300" height="300" src="./imgs/roc_curve_df.png">
+  <img width="300" height="300" src="./imgs/roc_curve_en.png">
+</p>
+
+Attack detection ROC curves for DiffDefense (left Deep Fool, right Elastic Net). In our experiments FGSM, PGD, AutoAttack, Square Attack yielded an
+AUC ∈ [.99, 1]
 

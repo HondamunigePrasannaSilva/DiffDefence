@@ -61,10 +61,6 @@ def createAdversarialData(attack, testset, batch_size):
             l = torch.cat ([l,label ])
 
 
-    #advtestset = torch.tensor(x_test_adv)
-
-    #dataset_ = TensorDataset(advtestset , l)
-    #advtestloader = DataLoader(dataset_, batch_size = batch_size)
 
     return x_test_adv , l
 
@@ -86,10 +82,7 @@ def FGSM_Attack_CH(submodel, datasetname, classifiername, testset, batchSize, ty
             advtestset = torch.cat ([advtestset,fast_gradient_method(model_fn=submodel, x=images, norm=np.inf,eps=0.3).detach().clone()])
             l = torch.cat ([l,label ])
     
-    # create a test using the adversarial images
-    #dataset_ = TensorDataset(advtestset , l)
-    #advtestloader = DataLoader(dataset_, batch_size = batchSize)
-    
+
     
     print("Attack conclude....")
     
@@ -113,10 +106,7 @@ def PGD_Attack_CH(submodel, datasetname, classifiername, testset, batchSize, typ
             advtestset = torch.cat ([advtestset,projected_gradient_descent(model_fn=submodel,x=images,eps=0.3,norm=np.inf, eps_iter=0.05, nb_iter = 5).detach().clone()])
             l = torch.cat ([l,label])
     
-    # create a test using the adversarial images
-    #dataset_ = TensorDataset(advtestset , l)
-    #advtestloader = DataLoader(dataset_, batch_size = batchSize)
-
+   
     print("Attack conclude....")
     
     return advtestset , l

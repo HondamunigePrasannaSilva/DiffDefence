@@ -251,28 +251,6 @@ def sample_(ddpm, sample_size, z_t):
     z_t = torch.tanh(z_t)          
     return z_t
 
-def trainMNIST(): # DELETE
-    learning_rate = 1e-3
-    num_epochs = 501
-    num_timesteps = 100
-    network = UNet()
-    network = network.to(device)
-    model = DDPM(network, num_timesteps, beta_start=0.0001, beta_end=0.02, device=device)
-    optimizer = torch.optim.AdamW(network.parameters(), lr=learning_rate)
-
-    dataloader , _ = getData(datasetname="MNIST", batch_size=512, typedata="both")
-    training_loop(model, dataloader, optimizer, num_epochs, num_timesteps,title="MNIST_ty_100", device=device) 
-
-def trainKMNIST(): # DELETE
-    learning_rate = 1e-3
-    num_epochs = 1001
-    num_timesteps = 100
-    network = UNet()
-    network = network.to(device)
-    model = DDPM(network, num_timesteps, beta_start=0.00001, beta_end=0.02, device=device)
-    optimizer = torch.optim.Adam(network.parameters(), lr=learning_rate)
-    dataloader , _ = getData(datasetname="KMNIST", batch_size=1024, typedata="both")
-    training_loop(model, dataloader, optimizer, num_epochs, num_timesteps,title="KMNIST_100", device=device)
 
 def trainDDPM(config):
     network = UNet()
