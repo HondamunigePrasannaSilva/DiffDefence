@@ -92,3 +92,17 @@ $python diffDefence.py --dataset='MNIST' --classifier='c_a_adv' --typeA='classif
 Attack detection ROC curves for DiffDefense (left Deep Fool, right Elastic Net). In our experiments FGSM, PGD, AutoAttack, Square Attack yielded an
 AUC ∈ [.99, 1]
 
+## Citation
+
+If you use this codebase, or otherwise found our work valuable, please cite Mamba:
+```
+@inproceedings{silva2023diffdefense,
+  title={DiffDefense: Defending Against Adversarial Attacks via Diffusion Models},
+  author={Silva, Hondamunige Prasanna and Seidenari, Lorenzo and Del Bimbo, Alberto},
+  booktitle={International Conference on Image Analysis and Processing},
+  pages={430--442},
+  year={2023},
+  organization={Springer}
+}
+
+```
